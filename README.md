@@ -82,6 +82,10 @@ rm /etc/nginx/sites-available/* /etc/nginx/sites-enabled/*
 cp nextcloud.nginx /etc/nginx/sites-available/nextcloud
 ```
 Substitute `the <DNS_NAME>` string in the `/etc/nginx/sites-available/nextcloud` file with the DNS name associated to your public IP.
+Create the directory to store the certificate and the private key:
+```
+mkdir -p /etc/nginx/ssl/
+```
 Link the SSL certificate to `/etc/nginx/ssl/nextcloud.crt` and the private key to `/etc/nginx/ssl/nextcloud.key`
 ```
 ln -s <PATH_TO_SSL_CERTIFICATE> /etc/nginx/ssl/nextcloud.crt
