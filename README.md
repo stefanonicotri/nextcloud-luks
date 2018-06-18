@@ -29,7 +29,7 @@ apt -y install docker-ce
 
 Install docker-compose (choose the last available version on https://github.com/docker/compose/releases)
 ```
-curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+curl -s https://github.com/docker/compose/releases | grep compose/releases | grep uname | head -1 | sed s/\<pre\>\<code\>// | bash
 chmod +x /usr/local/bin/docker-compose
 ```
 
