@@ -3,8 +3,8 @@
 This repository contains scripts and configuration files needed to obtain a working instance of NextCloud on encrypted disks based on the official NextCloud Docker image and LUKS technology.
 
 The following procedure has been tested on a Debian 9 (Stretch) virtual machine with two exernal devices:
-- `/dev/vda` used for the DBMS working directory (mounted on `/opt/nextcloud/db`)
-- `/dev/vdb` used to store NextCloud data (mounted on `/opt/nextcloud/db`)
+- `/dev/vdb` used for the DBMS working directory (mounted on `/opt/nextcloud/db`)
+- `/dev/vdc` used to store NextCloud data (mounted on `/opt/nextcloud/data`)
 
 N.B. **the devices must not be partitioned, formatted and mounted**. the LUKS script will take care of encrypting, formatting and mounting them on the correct locations
 
