@@ -33,7 +33,7 @@ curl -s https://github.com/docker/compose/releases | grep compose/releases | gre
 chmod +x /usr/local/bin/docker-compose
 ```
 
-Encrypt devices with the scripts from https://github.com/mtangaro/fast-luks (copied in this repo and adapted; `/dev/vda` is the DB device, `/dev/vdb` is the NextCloud data device):
+Encrypt devices with the scripts from https://github.com/mtangaro/fast-luks (copied in this repo and adapted; `/dev/vdb` is the DB device, `/dev/vdbc` is the NextCloud data device):
 ```
 apt -y install cryptsetup # you will be asked to choose your keyboard layout
 cp luksctl_d* /usr/local/bin/
