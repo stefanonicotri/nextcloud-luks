@@ -36,6 +36,7 @@ echo "NextCloud admin user password: " $NEXTCLOUD_ADMIN_PASSWORD >> credentials.
 sed -i "s/<MYSQL_ROOT_PASSWORD>/$MYSQL_ROOT_PASSWORD/" docker-compose.yml
 sed -i "s/<MYSQL_PASSWORD>/$MYSQL_PASSWORD/" docker-compose.yml
 sed -i "s/<NEXTCLOUD_ADMIN_PASSWORD>/$NEXTCLOUD_ADMIN_PASSWORD/" docker-compose.yml
+sed -i "s/<NEXTCLOUD_TABLE_PREFIX>/$NEXTCLOUD_TABLE_PREFIX/" docker-compose.yml
 
 cp docker-compose.yml /opt/nextcloud/
 cd /opt/nextcloud
