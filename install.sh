@@ -3,6 +3,7 @@
 #check if it's debian
 
 SERVER_IP=$(hostname -I)
+#FQDN=`host $IP  | awk '{ print $NF }' | sed 's/.$//')`
 
 apt update 
 apt -y full-upgrade
@@ -43,3 +44,6 @@ sed -i "s/<NEXTCLOUD_TABLE_PREFIX>/$NEXTCLOUD_TABLE_PREFIX/" docker-compose.yml
 cp docker-compose.yml /opt/nextcloud/
 cd /opt/nextcloud
 docker-compose up -d
+
+#sed "/'localhost'/ s/$/ 1 => '$FQDN',/" /opt/nextcloud/data/config/config.php
+
