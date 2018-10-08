@@ -12,8 +12,6 @@ apt update
 apt -y install docker-ce
 curl -s https://github.com/docker/compose/releases | grep compose/releases | grep uname | head -1 | sed s/\<pre\>\<code\>// | bash
 chmod +x /usr/local/bin/docker-compose
-git clone https://github.com/stefanonicotri/nextcloud-luks.git
-cd nextcloud-luks
 mkdir -p /opt/nextcloud/db
 mkdir -p /opt/nextcloud/data
 
