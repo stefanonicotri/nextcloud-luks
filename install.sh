@@ -2,6 +2,8 @@
 
 #check if it's debian
 
+SERVER_IP=$(hostname -I)
+
 apt update 
 apt -y full-upgrade
 apt -y autoremove
